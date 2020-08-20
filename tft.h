@@ -113,9 +113,9 @@ virtual size_t 	  write(const uint8_t *buffer, size_t size);
         void 	  drawCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color);
         void 	  fillCircle(int16_t Xm, int16_t Ym, uint16_t r, uint16_t color);
         void      pushColor(uint16_t color);
-        //boolean   drawBmpFile(fs::FS &fs, const char * path, uint16_t x=0, uint16_t y=0, uint16_t maxWidth=0, uint16_t maxHeight=0, uint16_t offX=0, uint16_t offY=0);
-        //boolean   drawGifFile(fs::FS &fs, const char * path, uint16_t x, uint16_t y, uint8_t repeat);
-        //boolean   drawJpgFile(fs::FS &fs, const char * path, uint16_t x=0, uint16_t y=0, uint16_t maxWidth=0, uint16_t maxHeight=0, uint16_t offX=0, uint16_t offY=0);
+        boolean   drawBmpFile(fs::FS &fs, const char * path, uint16_t x=0, uint16_t y=0, uint16_t maxWidth=0, uint16_t maxHeight=0, uint16_t offX=0, uint16_t offY=0);
+        boolean   drawGifFile(fs::FS &fs, const char * path, uint16_t x, uint16_t y, uint8_t repeat);
+        boolean   drawJpgFile(fs::FS &fs, const char * path, uint16_t x=0, uint16_t y=0, uint16_t maxWidth=0, uint16_t maxHeight=0, uint16_t offX=0, uint16_t offY=0);
         uint16_t  color565(uint8_t r, uint8_t g, uint8_t b);
         size_t    writeText(const uint8_t *str);
 
@@ -335,8 +335,8 @@ virtual size_t 	  write(const uint8_t *buffer, size_t size);
         void      startJpeg();
         void      endJpeg();
 
-        //void      bmpSkipPixels(fs::File &file, uint8_t bitsPerPixel, size_t len);
-        //void      bmpAddPixels(fs::File &file, uint8_t bitsPerPixel, size_t len);
+        void      bmpSkipPixels(fs::File &file, uint8_t bitsPerPixel, size_t len);
+        void      bmpAddPixels(fs::File &file, uint8_t bitsPerPixel, size_t len);
         void      drawBitmap(int16_t x, int16_t y, int16_t w, int16_t h, const uint16_t *pcolors);
         void      renderJPEG(int xpos, int ypos);
 
